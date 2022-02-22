@@ -80,7 +80,7 @@ const checkUsernameExists = async (req, res, next) => {
 const validateRoleName = (req, res, next) => {
   try {
     const role = req.body.role_name;
-
+    // console.log('req body', req)
     if (!role || !role.trim()) {
       req.role_name = "student";
       next();
